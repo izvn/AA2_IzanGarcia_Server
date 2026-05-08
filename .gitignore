@@ -1,0 +1,14 @@
+# Carpetas temporales de Visual Studio
+.vs/
+*.user
+
+# Carpetas de compilación
+x64/
+Debug/
+Release/
+
+# Archivos compilados y librerías dinámicas
+*.exe
+*.dll
+*.pdb
+*.ilk
