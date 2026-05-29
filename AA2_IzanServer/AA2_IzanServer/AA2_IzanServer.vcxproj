@@ -107,11 +107,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\happy\Downloads\mysql-connector-c++-8.0.33-winx64\mysql-connector-c++-8.0.33-winx64\include;C:\Users\happy\Desktop\Redes\SFML-3.1.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-network-d.lib;sfml-system-d.lib;</AdditionalDependencies>
+      <AdditionalDependencies>sfml-network.lib;sfml-system.lib;mysqlcppconn.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\happy\Desktop\Redes\SFML-3.1.0\lib;C:\Users\happy\Downloads\mysql-connector-c++-8.0.33-winx64\mysql-connector-c++-8.0.33-winx64\lib64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,17 +124,23 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\happy\Downloads\mysql-connector-c++-8.0.33-winx64\mysql-connector-c++-8.0.33-winx64\include;C:\Users\happy\Desktop\Redes\SFML-3.1.0\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\happy\Desktop\Redes\SFML-3.1.0\lib;C:\Users\happy\Downloads\mysql-connector-c++-8.0.33-winx64\mysql-connector-c++-8.0.33-winx64\lib64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-network.lib;sfml-system.lib;mysqlcppconn.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Database.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
+    <ClInclude Include="Database.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
